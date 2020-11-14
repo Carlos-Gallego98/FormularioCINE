@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Titulo del formulario -->
+    <title>Formulario de CINE</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Enlaces para poder usar Bootstrap Y JQuery -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>	
+	<!-- JavaScript a utilizar -->
+	<script src="cine.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1><b>Formulario de CINE</b></h1>
+        <p><b> Los campos obligatorios se marcan con *.</b> </p>
+        <h2><b> Carga de películas</b> </h2>
+    </div> <!-- Jumbotron -->
+    <form>    
+        <div class="row">
+            <div class="col-sm-3"> 
+                <h2 class="text-center">Datos principales</h2>
+                <h4 class="text-primary"><b> Película: *</b><input id="pelicula" alt="Película" type="text" class="obligatorio"> </h4>
+                <h4 class="text-primary"><b> Director: *</b><input id="director" alt="Director" type="text" class="obligatorio"> </h4>
+                <h4 class="text-warning"><b> Género: *</b>
+                    <select id="genero" type="text">  
+                		<option selected>Animacion</option> 
+		                <option>Aventura</option>
+		                <option>Comedia/Drama</option>
+	                 </select>
+                </h4>
+            </div> <!-- Col1 -->
+            <div class="col-sm-3">    
+               <h2 class="text-center">Creditos</h2>   
+                <h4 id="variable" class="text-primary"><b> Distribuidor: *</b><input id="distribuidor" alt="Distribuidor" type="text" class="obligatorio"> </h4>
+                <h4 class="text-primary"><b> E-Mail: *</b><input id="email" alt="Correo-electrónico" type="e-mail" class="obligatorio"> </h4>
+                <h4 class="text-primary"><b> Año: *</b><input id="año" alt="Año de lanzamiento" type="text" class="obligatorio"> </h4>
+            </div> <!-- Col2 -->
+            <div class="col-sm-6">    
+                <h2 class="text-center">Reparto</h2> 
+                <h4 id="campo1" class="text-primary"><b> Protagonista: </b><input id="protagonista" type="text"> </h4>
+                <h4 id="campo2" class="text-primary"><b> Edad: </b><input id="edadprota" type="text" > </h4>
+                <h4 id="campo3" class="text-primary"><b> Antagonista: </b><input id="antagonista" type="text"> </h4>
+                <h4 id="campo4" class="text-primary"><b> Edad: </b><input id="edadanta" type="text" > </h4>
+                <h4 id="campo5" class="text-primary"><b> Animador: </b><input id="animador" type="text"> </h4>
+            </div> <!-- Col3 -->
+        </div> <!-- Row -->
+        <div class="row">
+            <div class="col-sm-12">
+                <button id="btn-validar" type="button">Validar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <text id="mensaje"></text>
+            </div>
+        </div>
+    </form>
+</div> <!-- Container -->
+</body>
+</html>
